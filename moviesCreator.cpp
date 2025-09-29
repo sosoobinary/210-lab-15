@@ -15,7 +15,7 @@ class Movie {
         void setScreenWriter(const string& s) {
             screenWriter = s;
         }
-        void setYear(const string& y) {
+        void setYear(const int& y) {
             year = y;
         }
         void setTitle(const string& t) {
@@ -33,9 +33,9 @@ class Movie {
         }
 
         void print() const {
-            cout << "Movie: " << screenWriter << end;
-            cout << "    Year released: " << year << end;
-            cout << "    Screenwriter: " << title << end;
+            cout << "Movie: " << screenWriter << endl;
+            cout << "    Year released: " << year << endl;
+            cout << "    Screenwriter: " << title << endl;
         }
 };
 
@@ -45,6 +45,7 @@ int main() {
     vector<Movie> movies;
     string title;
     int year;
+    string screenWriter;
 
     while(getline(inputFile, title)) {
         inputFile >> year;
