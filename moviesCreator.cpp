@@ -32,8 +32,16 @@ class Movie {
             return title;
         }
 
+        void print() const {
+            cout << "Movie: " << screenWriter << end;
+            cout << "    Year released: " << year << end;
+            cout << "    Screenwriter: " << title << end;
+        }
 };
 
 int main() {
-
+    ifstream inputFile("input.txt");
+    
+    vector<Movie> movies;
+    return 0;
 }
