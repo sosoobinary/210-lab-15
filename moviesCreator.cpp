@@ -43,5 +43,26 @@ int main() {
     ifstream inputFile("input.txt");
     
     vector<Movie> movies;
+    string title;
+    int year;
+
+    while(getline(inputFile, title)) {
+        inputFile >> year;
+        inputFile.ignore();
+        getline(inputFile, screenWriter);
+
+        Movie temporary;
+        temporary.setTitle(title);
+        temporary.setYear(year);
+        temporary.setScreenWriter(screenWriter);
+
+        movies.push_back(temporary);
+    }
+
+    inputFile.close();
+
+    for(const Movie& m : movies) {
+        m.print();
+    }
     return 0;
 }
